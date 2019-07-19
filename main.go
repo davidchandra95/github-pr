@@ -6,6 +6,8 @@ import (
 	"html/template"
 	"io/ioutil"
 	"net/http"
+
+	"github.com/gorilla/mux"
 )
 
 type PR struct {
@@ -20,10 +22,10 @@ type Main struct {
 }
 
 func main() {
-
-	http.HandleFunc("/", handler)
-	http.HandleFunc("/generate", generateHandler)
-
+	r := mux.NewRouter()
+	r.HandleFunc("/", handler).Methods("GET")
+	r.HandleFunc("/generate", generateHandler).Methods("POST")
+	http.Handle("/", r)
 	http.ListenAndServe(":8080", nil)
 }
 

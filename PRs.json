@@ -1,9 +1,9 @@
 {
-"PR": [
-{
-"Reviewer": "@david",
-"PRLink": "`dsajdkad`",
-"Description": "```\ndaisdadhkasdja\n```"
-}
-]
+  "PR": [
+    {
+      "Reviewer": "@agil",
+      "PRLink": "`https://github.com/tokopedia/resolution/pull/9134`",
+      "Description": "```\nInsert update endpoint whitelist\n```"
+    }
+  ]
 }
